@@ -58,7 +58,11 @@ public class GmApiClient {
         Map<String,String> hashMap = new HashMap<>();
         hashMap.put("accessKey",accessKey);
         hashMap.put("nonce", RandomUtil.randomNumbers(4));
-        hashMap.put("body",body);
+        try {
+            hashMap.put("body", URLEncoder.encode(body,"utf-8"));
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
         hashMap.put("timestamp",String.valueOf(System.currentTimeMillis() / 1000));
         hashMap.put("sign",getSign(body,secretKey));
         return hashMap;
