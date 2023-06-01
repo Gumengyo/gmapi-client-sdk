@@ -18,7 +18,7 @@
 
 #### 2. 登录 Gm Api 开放平台 获取密钥对
 
-![](image-20230601190030723.png)
+![](describe.png)
 
 #### 3. 初始化 GmApiClient 对象
 
