@@ -2,7 +2,7 @@
 
 基于 Spring Boot Starter 开发
 
-项目地址：http://139.9.212.105:8080/
+项目地址：http://api.jishuqin.cn
 
 ### 快速开始
 
