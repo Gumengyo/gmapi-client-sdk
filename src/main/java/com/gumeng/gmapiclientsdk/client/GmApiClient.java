@@ -7,7 +7,8 @@ import cn.hutool.json.JSONUtil;
 import com.gumeng.gmapiclientsdk.model.Api;
 import com.gumeng.gmapiclientsdk.utils.SignUtils;
 
-
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
