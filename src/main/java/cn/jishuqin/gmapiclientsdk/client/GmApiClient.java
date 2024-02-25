@@ -48,7 +48,7 @@ public class GmApiClient {
             String json = JSONUtil.toJsonStr(api.getBody());
             return HttpRequest.post(GATEWAY_HOST + api.getUrl())
                     .header("Accept", "application/json; charset=utf-8")
-                    .addHeaders(getheaderMap(json))
+                    .addHeaders(getheaderMapByPost(json))
                     .charset("UTF-8")
                     .body(json)
                     .execute().body();
@@ -61,7 +61,7 @@ public class GmApiClient {
      * @param body
      * @return
      */
-    private Map<String,String> getheaderMap(String body) {
+    private Map<String,String> getheaderMapByPost(String body) {
         Map<String,String> hashMap = new HashMap<>();
         hashMap.put("accessKey",accessKey);
         hashMap.put("nonce", RandomUtil.randomNumbers(4));
